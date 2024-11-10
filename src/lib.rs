@@ -59,7 +59,7 @@ fn prime_count(n: usize) -> usize {
 /// the `lib.name` setting in the `Cargo.toml`, else Python will not be able to
 /// import the module.
 #[pymodule]
-fn pyo3(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn prime(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(is_prime, m)?)?;
     m.add_function(wrap_pyfunction!(prime_count, m)?)?;
     Ok(())

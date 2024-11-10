@@ -167,6 +167,8 @@ jobs:
       attestations: write
     steps:
       - uses: actions/download-artifact@v4
+      - name: Display structure of downloaded files
+        run: ls -R
       # - name: Generate artifact attestation
       #   uses: actions/attest-build-provenance@v1
       #   with:
@@ -174,6 +176,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: '/home/runner/work/prime/prime/wheels*'
+          files: '/home/runner/work/prime/prime/wheels-*/*'
           draft: true
           fail_on_unmatched_files: true
