@@ -171,9 +171,11 @@ jobs:
       #   uses: actions/attest-build-provenance@v1
       #   with:
       #     subject-path: 'wheels-*/*'
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: 'wheels-*/*'
+          # subject-path: 'wheels-*/*'
           draft: true
           fail_on_unmatched_files: true
