@@ -174,6 +174,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: '*/*/*'
+          files: '/home/runner/work/prime/prime/wheels*'
           draft: true
           fail_on_unmatched_files: true
